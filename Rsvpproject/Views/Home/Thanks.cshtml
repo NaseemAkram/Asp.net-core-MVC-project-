@@ -1,0 +1,21 @@
+﻿@model Rsvpproject.Models.GuestResponse
+@{
+    ViewData["Title"] = "Thanks";
+}
+
+
+
+<body class="text-center">
+    <p>
+        <h1>
+            Thanks you, @Model.Name!
+        </h1>
+        @if(Model.WillAttend==true)
+        {
+            @:It's great that you're coming.The drinks are ready in fridge!
+        } else{
+            @:Sorry to here that you cannot make it, but thanks for letting us know.
+        }
+    </p>
+    <p>Click <a class="nav-link" asp-action="ListResponses">here</a><span>To see who is comming.</span></p>
+</body>

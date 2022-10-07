@@ -1,0 +1,51 @@
+﻿@model Rsvpproject.Models.GuestResponse
+@{
+    ViewData["Title"] = "RsvpForm";
+}
+<head>
+    <link href="~/style.css" rel="stylesheet" />
+  
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.rtl.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+<h1>RsvpForm</h1>
+
+<body>
+    <div class="panel panel-success">
+        <div class="panel-heading text-center"><h4>RSVP</h4></div>
+        <div class="panel-body">
+            <form class="p-a-1" asp-action="RsvpForm" method="post">
+                <div asp-validation-summary="All"></div>
+                <div class="form-group">
+                    <label asp-for="Name">Your name:</label>
+                    <input class="form-control" asp-for="Name" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email">Your email:</label>
+                    <input class="form-control" asp-for="Email" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Phone">Your phone:</label>
+                    <input class="form-control" asp-for="Phone" />
+                </div>
+                <div class="form-group">
+                    <label>Will you attend?</label>
+                    <select class="form-control" asp-for="WillAttend">
+                        <option value="">Choose an option</option>
+                        <option value="true">Yes, I'll be there</option>
+                        CHAPTER 2 ■ YOUR FIRST MVC APPLICATION
+                        48
+                        <option value="false">No, I can't come</option>
+                    </select>
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-primary" type="submit">
+                        Submit RSVP
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
